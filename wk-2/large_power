@@ -1,0 +1,10 @@
+def large_power(base, exponent):
+    result = base ** exponent  # Calculate base raised to the exponent
+    if result > 5000:
+        return True
+    else:
+        return False
+print(large_power(10, 3))   # False, because 10^3 = 1000
+print(large_power(10, 4))   # True, because 10^4 = 10000
+print(large_power(5, 5))    # False, because 5^5 = 3125
+print(large_power(8, 5))    # True, because 8^5 = 32768

@@ -1,0 +1,5 @@
+As a beginner, learning Python is a great first step.
+Beginners often start with basic syntax and variables.
+Understanding loops and functions is key to building logic.
+Debugging is part of the learning process.
+Building projects boosts confidence and skill.

@@ -1,0 +1,17 @@
+import numpy as np
+
+# Create array with numbers from 10 to 50
+arr = np.arange(10, 51)
+
+# Find maximum and minimum values
+max_val = np.max(arr)
+min_val = np.min(arr)
+
+# Multiply all elements by 3
+multiplied = arr * 3
+
+# Display results
+print("Original array:", arr)
+print("Maximum value:", max_val)
+print("Minimum value:", min_val)
+print("Array multiplied by 3:", multiplied)

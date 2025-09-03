@@ -1,0 +1,47 @@
+import matplotlib.pyplot as plt
+
+# --------------------------
+# 1. Bar Chart - Countries and Population
+# --------------------------
+countries = ['Kenya', 'India', 'USA', 'Brazil', 'Germany']
+population = [54, 1391, 331, 213, 83]  # in millions
+
+plt.figure(figsize=(8, 5))
+plt.bar(countries, population, color='skyblue')
+plt.title('Population by Country (in millions)')
+plt.xlabel('Country')
+plt.ylabel('Population')
+plt.grid(axis='y', linestyle='--', alpha=0.5)
+plt.tight_layout()
+plt.savefig("bar_chart_population.png")
+plt.close()  # Close the figure to prevent overlap
+
+# --------------------------
+# 2. Pie Chart - Student’s Day
+# --------------------------
+labels = ['Sleep', 'Study', 'Classes', 'Exercise', 'Leisure']
+hours = [8, 6, 4, 2, 4]
+
+plt.figure(figsize=(6, 6))
+plt.pie(hours, labels=labels, autopct='%1.1f%%', startangle=90, colors=plt.cm.Paired.colors)
+plt.title("How a Student Spends 24 Hours")
+plt.axis('equal')
+plt.tight_layout()
+plt.savefig("student_day_pie_chart.png")
+plt.close()
+
+# --------------------------
+# 3. Line Chart - Temperature Changes During the Day
+# --------------------------
+time_of_day = ['Morning', 'Noon', 'Evening', 'Night']
+temperatures = [18, 26, 22, 16]  # in degrees Celsius
+
+plt.figure(figsize=(7, 5))
+plt.plot(time_of_day, temperatures, marker='o', linestyle='-', color='tomato')
+plt.title('Temperature Changes During the Day')
+plt.xlabel('Time of Day')
+plt.ylabel('Temperature (°C)')
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.tight_layout()
+plt.savefig("temperature_line_chart.png")
+plt.close()

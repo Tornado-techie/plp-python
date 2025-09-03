@@ -1,0 +1,5 @@
+Learning Python is fun.
+Practice makes perfect.
+This is a text processing task.
+Git helps manage code versions.
+Let's write clean and readable code.

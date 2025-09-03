@@ -1,0 +1,20 @@
+import pandas as pd
+
+# Step 1: Create the DataFrame
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [20, 21, 22],
+    'Grade': [65, 45, 80]
+}
+
+df = pd.DataFrame(data)
+
+# Step 2: Add a 'Passed' column where Grade > 50
+df['Passed'] = df['Grade'] > 50
+
+# Step 3: Filter only the students who passed
+passed_students = df[df['Passed'] == True]
+
+# Display results
+print("All Students:\n", df)
+print("\nStudents Who Passed:\n", passed_students)

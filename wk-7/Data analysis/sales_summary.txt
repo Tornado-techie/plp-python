@@ -1,0 +1,5 @@
+📊 Sales Summary Report
+------------------------
+✅ Total Revenue: $2,130.00
+🏆 Best-Selling Product: Dress
+📅 Day with Highest Sales: 2025-07-24
