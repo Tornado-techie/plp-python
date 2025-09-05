@@ -1,96 +1,61 @@
-# Python Data Analysis and Visualization Project
+# Image Fetcher
 
-This project demonstrates basic data analysis and visualization tasks using Python with the following libraries:
+A simple Python script to download images from the web and save them locally. This project demonstrates how to use Python’s `requests` library, file handling, and logging and is part of the week 6 assignment for python module at PLP.
 
-*   **pandas:** For data manipulation and analysis.
-*   **numpy:** For numerical operations.
-*   **matplotlib:** For data visualization.
-*   **requests:** For making web requests and fetching data from APIs.
+## 📂 Project Structure
+Desktop/ └── Python/ ├── venv/ # Virtual environment └── wk-6/ ├── fetch_images.py # Main script ├── README.md # Project documentation └── Fetched_Images/ # Folder where images & logs are saved └── download_log.txt
 
-## Installation
 
-Before running the code, ensure you have the necessary libraries installed. You can install them using pip:
+## ⚙️ Setup Instructions
 
-```bash
-pip install pandas numpy matplotlib requests
-Project Structure
-The project consists of a single Python script:
+1. **Clone or Copy Project**
 
-main.py
-: Contains the main code that performs the data analysis and visualization tasks.
-Usage
-To run the project, simply execute the
-main.py
-script:
+   Navigate to your working directory:
 
-python main.py
-Functionality
-The
-main.py
-script performs the following tasks:
+   ```bash
+   cd ~/Desktop/Python/wk-6
+   Create a Virtual Environment (recommended)
 
-NumPy Array and Mean Calculation:
+    python -m venv venv
+    Activate the virtual environment:
 
-Creates a NumPy array containing numbers from 1 to 10.
-Calculates the mean of the array using
-numpy.mean()
-.
-Prints the calculated mean to the console.
-Pandas DataFrame and Summary Statistics:
+    Windows (Git Bash / PowerShell):
 
-Loads a small, predefined dataset (in a dictionary format) into a pandas DataFrame. This dataset is defined directly within the script.
-Displays summary statistics of the DataFrame using
-pandas.DataFrame.describe()
-.
-Prints the summary statistics to the console.
-API Data Fetching with Requests:
+    source venv/Scripts/activate
+    Linux/Mac:
 
-Fetches data from a public API (specifically, the JSON Placeholder API -
-https://jsonplaceholder.typicode.com/todos/1
-).
-Parses the JSON response.
-Prints the value associated with the "title" key from the JSON response to the console.
-Handles potential errors during the API request (e.g., connection errors).
-Matplotlib Line Graph:
+    source venv/bin/activate
+    You should see
+    (venv)
+    at the start of your terminal line.
 
-Creates a simple list of numbers (e.g.,
-[1, 3, 2, 4, 5]
-).
-Plots the list of numbers as a line graph using
-matplotlib.pyplot.plot()
-.
-Adds a title to the graph.
-Displays the graph using
-matplotlib.pyplot.show()
-. The graph will appear in a separate window.
-Code Example (Snippet from main.py - Illustrative)
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import requests
+### Install Dependencies
 
-# NumPy array and mean calculation
-numpy_array = np.arange(1, 11)
-mean_value = np.mean(numpy_array)
-print(f"Mean of NumPy array: {mean_value}")
+This project requires requests:
 
-# Pandas DataFrame and summary statistics
-data = {'col1': [1, 2, 3, 4, 5], 'col2': [6, 7, 8, 9, 10]}
-df = pd.DataFrame(data)
-print("\nDataFrame Summary Statistics:")
-print(df.describe())
+pip install requests
+▶️ Running the Script
+Run the script from inside the
+wk-6 folder: python fetch_images.py
+Or from the root folder using the full path: python wk-6/fetch_images.py
 
-# API Data Fetching with Requests
-try:
-    response = requests.get("https://jsonplaceholder.typicode.com/todos/1")
-    response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
-    json_data = response.json()
-    print(f"\nAPI Title: {json_data['title']}")
-except requests.exceptions.RequestException as e:
-    print(f"Error fetching data from API: {e}")
+### 📦 Output
+Downloaded images will be saved inside the Fetched_Images/ folder.
 
-# Matplotlib Line Graph
-numbers = [1, 3, 2, 4, 5]
-plt.plot(numbers)
-plt.title("Simple Line Graph")
-plt.show()
+A download_log.txt file will also be created inside Fetched_Images/ , containing a log of all downloads (successful or failed).
+
+### 🛠️ Requirements
+Python 3.10+ (tested with Python 3.13) requests library (pip install requests)
+📝 Example Log File
+Inside Fetched_Images/download_log.txt you’ll see entries like:
+
+[2025-09-05 14:32:10] SUCCESS - Downloaded: cat.jpg
+[2025-09-05 14:32:11] ERROR   - Failed to fetch: dog.jpg (404 Not Found)
+
+### 🚀 Future Improvements
+Add a progress bar for downloads.
+Allow batch downloading from a .txt file of URLs.
+Add a retry mechanism for failed downloads.
+
+## Author
+[Salome Mundia]

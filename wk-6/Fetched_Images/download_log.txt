@@ -1,0 +1,3 @@
+[2025-09-05 15:59:20.749931] Connection error while fetching https://www.pexels.com/photo/close-up-photo-of-plastic-bottles-2547565/: 403 Client Error: Forbidden for url: https://www.pexels.com/photo/close-up-photo-of-plastic-bottles-2547565/
+[2025-09-05 15:59:21.751564] Connection error while fetching https://www.pexels.com/photo/photo-of-plastics-near-trees-2583836/: 403 Client Error: Forbidden for url: https://www.pexels.com/photo/photo-of-plastics-near-trees-2583836/
+[2025-09-05 15:59:22.697517] Connection error while fetching https://www.pexels.com/photo/close-up-photo-of-plastic-bottle-2409022/: 403 Client Error: Forbidden for url: https://www.pexels.com/photo/close-up-photo-of-plastic-bottle-2409022/
